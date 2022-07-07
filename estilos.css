@@ -1,0 +1,104 @@
+
+div {
+    background: red;
+    margin: 4px;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+
+/* Filas y columnas explicitas */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /*me arma dos columnas y define ancho*/
+    grid-template-rows: 1fr 3fr;
+    
+}
+
+.gridRepetitiva {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6,1fr) ;  /* 12 columnas */
+    grid-template-rows: repeat(6,1fr);  /* 12 filas */
+  
+}
+
+/* grid por area */
+
+.gridArea {
+    text-align: center;
+    display: grid;
+
+    grid-template-areas: 
+    "header header header "
+    "aside contenido aside2"
+    "footer footer footer";
+   
+    /* defino tamaños */
+    grid-template-columns: 1.5fr 4fr 1fr ;
+    grid-template-rows: 1fr 3fr 1fr ;
+
+
+
+
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+}
+
+.header {
+    color: white;
+    background: red;
+    grid-area: header;
+    border: 2px solid black;
+}
+
+.aside {
+    background: red;
+    grid-area: aside;
+    border: 2px solid;
+}
+
+.aside2 {
+    background:red;
+    grid-area: aside2;
+    border: 2px solid;
+}
+.article {
+    background: red;
+    grid-area: contenido;
+    border: 2px solid;
+}
+
+.footer {
+    background: red;
+    grid-area: footer;
+    border: 2px solid;
+}
+
+/* hacer el iframe responsive */
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+
+}
+
+.wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* imagenes responsive */
+
+img {
+    width: 100%; 
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px rgba(15, 15, 15, .5);
+    height: 20vh;
+}
